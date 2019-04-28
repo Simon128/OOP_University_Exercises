@@ -1,27 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Development\Uni\OOP_University_Exercises\src\main\scala\exercise2\polynomial.scala:53:24: private class Polynomial escapes its defining scope as part of type exercise2.Polynomial[0m
-[0m[[0m[31merror[0m] [0m[0m    def const(v: Int): Polynomial = {[0m
-[0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Development\Uni\OOP_University_Exercises\src\main\scala\exercise2\polynomial.scala:52:9: private class Polynomial escapes its defining scope as part of type exercise2.Polynomial[0m
-[0m[[0m[31merror[0m] [0m[0m    val x = new Polynomial(Array(0,1))[0m
-[0m[[0m[31merror[0m] [0m[0m        ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Development\Uni\OOP_University_Exercises\src\main\scala\exercise3\graph\node.scala:3:18: object flexibels is not a member of package exercise2[0m
-[0m[[0m[31merror[0m] [0m[0mimport exercise2.flexibels._[0m
-[0m[[0m[31merror[0m] [0m[0m                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Development\Uni\OOP_University_Exercises\src\main\scala\exercise3\graph\graph.scala:3:18: object flexibels is not a member of package exercise2[0m
-[0m[[0m[31merror[0m] [0m[0mimport exercise2.flexibels._[0m
-[0m[[0m[31merror[0m] [0m[0m                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Development\Uni\OOP_University_Exercises\src\main\scala\exercise3\graph\node.scala:6:57: not found: type VariableStructure[0m
-[0m[[0m[31merror[0m] [0m[0mclass Node(private val name: String, private val edges: VariableStructure){[0m
-[0m[[0m[31merror[0m] [0m[0m                                                        ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Development\Uni\OOP_University_Exercises\src\main\scala\exercise3\graph\graph.scala:11:39: not found: type VariableArray[0m
-[0m[[0m[31merror[0m] [0m[0m        val nodeA = new Node("A", new VariableArray())[0m
-[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Development\Uni\OOP_University_Exercises\src\main\scala\exercise3\graph\graph.scala:12:39: not found: type VariableArray[0m
-[0m[[0m[31merror[0m] [0m[0m        val nodeB = new Node("B", new VariableArray())[0m
-[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Development\Uni\OOP_University_Exercises\src\main\scala\exercise3\graph\graph.scala:13:39: not found: type VariableArray[0m
-[0m[[0m[31merror[0m] [0m[0m        val nodeC = new Node("C", new VariableArray())[0m
-[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Development\Uni\OOP_University_Exercises\src\main\scala\exercise3\graph\graph.scala:14:39: not found: type VariableArray[0m
-[0m[[0m[31merror[0m] [0m[0m        val nodeD = new Node("D", new VariableArray())[0m
-[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Development\Uni\OOP_University_Exercises\src\main\scala\exercise3\graph\graph.scala:79:22: not found: value currentNode[0m
+[0m[[0m[31merror[0m] [0m[0m            for(n <- currentNode){[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
