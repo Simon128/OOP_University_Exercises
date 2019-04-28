@@ -1,4 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Development\Uni\OOP_University_Exercises\src\main\scala\exercise3\graph\graph.scala:79:22: not found: value currentNode[0m
-[0m[[0m[31merror[0m] [0m[0m            for(n <- currentNode){[0m
-[0m[[0m[31merror[0m] [0m[0m                     ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
