@@ -1,6 +1,6 @@
 # OOP_University_Exercises
 
-## Prerequisits: 
+## Prerequisite: 
 - JDK (+ env-variables)
 - Scala sbt (+ env-variables)
 
