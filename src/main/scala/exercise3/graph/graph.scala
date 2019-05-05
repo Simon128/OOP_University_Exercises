@@ -68,7 +68,6 @@ class Graph(var startingNode: Node){
             }
             return reachable
         }
-
         def inner(currentNodes: ListBuffer[Node]){
             var reachableNodes = new ListBuffer[Node]()
 
