@@ -10,6 +10,8 @@ trait Vehicle{
     val ammoStorage: Ammo
 
     def need(): Unit = {
+        fuelTank.need()
+        ammoStorage.need()
         Manager.getSupplyArray()(5) += neededOil
         Manager.getSupplyArray()(6) += neededGrease
     }
