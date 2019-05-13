@@ -6,6 +6,7 @@ abstract class VehicleImpl extends Vehicle{
     override def reduceAll(intensity: Int) = {
         fuelTank.reduceAmount(intensity)
         ammoStorage.reduceAmount(intensity)
+        reduceOilAndGrease()
 
         // for(i <- 0 until intensity){
         //     super.reduceOilAndGrease()
@@ -35,5 +36,6 @@ class SpecialUfo(val name: String, amountFuel: Int, amountAmmo: Int) extends Veh
     override def reduceAll(intensity: Int) = {
         fuelTank.reduceAmount(intensity * 50)
         ammoStorage.reduceAmount(intensity * 2)
+        reduceOilAndGrease()
     }
 }
