@@ -1,8 +1,8 @@
-package exercise4.logisticsEntities
+package exercise5.logisticsEntities
 
-import exercise4.logisticsDefinitions._
+import exercise5.logisticsDefinitions._
 
-trait VehicleImpl extends Vehicle{
+abstract class VehicleImpl extends Vehicle{
     override def reduceAll(intensity: Int) = {
         fuelTank.reduceAmount(intensity)
         ammoStorage.reduceAmount(intensity)
@@ -26,4 +26,14 @@ class Tank(val name: String, amountFuel: Int, amountAmmo: Int) extends VehicleIm
 class Helicopter(val name: String, amountFuel: Int, amountAmmo: Int) extends VehicleImpl{
     val fuelTank: Fuel = new Kerosene(amountFuel, 500)
     val ammoStorage: Ammo = new HeliAmmo(amountAmmo, 2)
+}
+
+class SpecialUfo(val name: String, amountFuel: Int, amountAmmo: Int) extends VehicleImpl{
+    val fuelTank: Fuel = new Deuterium(amountFuel, 200)
+    val ammoStorage: Ammo = new AllAmmo(amountAmmo, 12)
+
+    override def reduceAll(intensity: Int) = {
+        fuelTank.reduceAmount(intensity * 50)
+        ammoStorage.reduceAmount(intensity * 2)
+    }
 }
