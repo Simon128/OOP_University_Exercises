@@ -10,7 +10,10 @@ trait Fuel{
     val metric: Metric
 
     def getAmount(): Int = amount
-    protected def setAmount(a: Int): Unit = amount = a
+    protected def setAmount(a: Int): Unit ={
+        require(a > 0 && a <= maximum, "err")
+        amount = a
+    }
     def resetAmount(): Unit = amount = maximum
     def reduceAmount(rate: Int): Unit = amount -= rate
     def need(): Unit

@@ -16,15 +16,19 @@ trait Vehicle{
         Manager.getSupplyArray()(6) += neededGrease
     }
     def reset(): Unit = {
+        fuelTank.resetAmount()
+        ammoStorage.resetAmount()
         neededOil = 0
         neededGrease = 0
     }
     protected def reduceOilAndGrease(): Unit = {
-        if(neededOil == 3 || neededGrease == 3)
-            throw new Exception("neededOil or neededGrease reached already 0")
+        // if(neededOil == 3 || neededGrease == 3)
+        //     throw new Exception("neededOil and neededGrease reached already 0")
 
-        neededOil += 1
-        neededGrease += 1
+        if(neededOil < 3){
+            neededOil += 1
+            neededGrease += 1
+        }
     }
     def reduceAll(intensity: Int): Unit 
     def getNeededOil(): Int = neededOil

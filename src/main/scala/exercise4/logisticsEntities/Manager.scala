@@ -17,7 +17,7 @@ object Manager{
             v.ammoStorage.resetAmount()
         }
         for(i <- 0 until supplyArray.length){
-            supplyArray(0) = 0
+            supplyArray(i) = 0
         }
     }
     def showOverallNeed(): Unit = {
