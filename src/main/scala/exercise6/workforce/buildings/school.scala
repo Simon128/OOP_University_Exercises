@@ -10,6 +10,6 @@ object School{
             ++ Array.fill(lj)(new Lumberjack()) 
             ++ Array.fill(sm)(new Smith()) 
             ++ Array.fill(ca)(new Carpenter()) 
-            ++ Array.fill(fa)(new Farmer))
+            ++ Array.fill(fa)(new Farmer()))
     }
 }

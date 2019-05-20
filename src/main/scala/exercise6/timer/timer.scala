@@ -3,7 +3,7 @@ package exercise6.timer
 class Timer{
     var time: Int = 0
     var endTime: Long = 0
-    var state: State = SetSecondsState
+    private var state: State = SetSecondsState
 
     val Billion: Long = 1000000000
 
@@ -12,7 +12,7 @@ class Timer{
     def down(): Unit = state.down()
     def mode(): Unit = state.mode()
     def start(): Unit = state.start()
-    def isBeeping(): Boolean = state == BeepingState
+    def isBeeping(): Boolean = state.isBeeping()
     def isRunning(): Boolean = (state == CountdownState) || isBeeping()
 
     def remainingTime(): Int = nanoToSec(endTime - System.nanoTime()).toInt
@@ -20,15 +20,16 @@ class Timer{
     private def nanoToSec(nano: Long) = nano / Billion
     private def secToNano(sec: Long) = sec * Billion
 
-    protected class State{
+    private abstract class State{
         def tick(): Unit = {}
         def up(): Unit = {}
         def down(): Unit = {}
         def mode(): Unit = {}
         def start(): Unit = {}
+        def isBeeping(): Boolean = state == BeepingState
     }
 
-    object SetSecondsState extends State{
+    private object SetSecondsState extends State{
         override def mode(): Unit = state = SetMinutesState
         override def start(): Unit = {
             state = CountdownState
@@ -44,7 +45,7 @@ class Timer{
         }
     }
 
-    object SetMinutesState extends State{
+    private object SetMinutesState extends State{
         override def mode(): Unit = {
             state = SetSecondsState
         }
@@ -62,7 +63,7 @@ class Timer{
         }
     }
 
-    object CountdownState extends State{
+    private object CountdownState extends State{
         override def start(): Unit = {
             state = SetSecondsState
             time = remainingTime()
@@ -75,7 +76,7 @@ class Timer{
         }
     }
 
-    object BeepingState extends State{
+    private object BeepingState extends State{
         override def tick(): Unit = {
             if(System.nanoTime() >= endTime)
                 state = SetSecondsState
