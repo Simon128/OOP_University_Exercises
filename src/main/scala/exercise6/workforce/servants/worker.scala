@@ -2,9 +2,8 @@ package exercise6.workforce.servants
 
 import exercise6.workforce.equipment._
 
-class Worker{
+abstract class Worker(val name: String){
     private var tool: Tool = null
-    var name: String = "Generic Worker"
 
     protected def getToolName(): String = {
         if(tool == null)
